@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "keyword.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int is_whitespace(char c)
@@ -64,11 +66,9 @@ if(fp == NULL)
 //word reading & analysis
 while (fget_word(fp,word )!= 0)
 {
-	printf("%s\n", word);
+	count_word(word);
 }
 //output
-	fclose(fp);
-	 
-	return 0;
+	print_word();
 }
 
